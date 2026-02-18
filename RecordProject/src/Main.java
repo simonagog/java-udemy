@@ -17,6 +17,19 @@ public class Main {
             System.out.println(s);
         }
 
+        Student pojoStudent = new Student("S12006",
+                "Ann",
+                "11/07/1992",
+                "Java Masterclass");
+        LPAStudent recordStudent = new LPAStudent("S12007",
+                "Bill",
+                "11/07/1992",
+                "Java Masterclass");
 
+        System.out.println(pojoStudent);
+        System.out.println(recordStudent);
+
+        System.out.println(pojoStudent.getName() + " is taking " + pojoStudent.getClassList());
+        System.out.println(recordStudent.name() + " is taking " + recordStudent.classList());
     }
 }
