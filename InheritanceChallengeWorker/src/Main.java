@@ -6,7 +6,16 @@ public class Main {
         System.out.println("Age = " + simo.getAge());
         System.out.println("Pay = " + simo.collectPay());
 
-        Employee dan = new Employee("Dan", "21/08/1988", "03/03/2019");
+        SalariedEmployee dan = new SalariedEmployee("Dan", "21/08/1988", "03/03/2019", 35000);
         System.out.println(dan);
+        System.out.println("Dan's Paycheck = $" + dan.collectPay());
+
+        dan.retire();
+        System.out.println("Dan's Pension check = $" + dan.collectPay());
+
+        HourlyEmployee mary = new HourlyEmployee("Mary", "07/03/1977", "03/03/2021", 15);
+        System.out.println(mary);
+        System.out.println("Mary's Paycheck = $" + mary.collectPay());
+        System.out.println("Mary's Holiday Pay = $" + mary.getDoublePay());
     }
 }
